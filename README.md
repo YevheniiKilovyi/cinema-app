@@ -19,7 +19,7 @@ That's a basic RESTful application, built with Spring Framework, which can perfo
 * create/update/remove a movie session / getting list of available sessions
 * completing order / getting a history of all user orders
 * creating shopping cart, add a product to movie cart, getting a shopping cart by user
-* finding user by an e-mail
+* finding a user by an e-mail
 * logout system
 
 # Structure of the project
@@ -29,9 +29,9 @@ Application has basic structure with adherence to all SOLID principles and N-tie
 * The package `controller` has controllers of all entities to perform resourse methods and AuthenticationConmtroller for correct registration of users.
 * The package `dao` has all services and implementations for accessing data from DB. In this application, all DAOs are based on ORM-framework Hibernate.
 * The package `dto` has models of request and response DTOs. DTO - Data Transfer Object - objects whose purpose is to collect data to be returned to the client by the server and increase performance of this app.
-* The package `exception` has costum DataProcessingException 
-* The package `lib` contains two costum annotations for checking user data during authentication and two validators for them.
-* The package `model` all Spring entities for correct functioning of app.
+* The package `exception` has custom DataProcessingException 
+* The package `lib` contains two custom annotations for checking user data during authentication and two validators for them.
+* The package `model` all Spring entities for correct functioning of an app.
 * The package `service` is responsible for working with the DAO and does not allow working with the DB at the controller level and `mapper` package contains mapper for DTOs.
 * The package `util` has `DateTimePatternUtil` for standardization of date pattern.
 * The directory `resources` has a `db.properties` file, that should be used to properly structure the database.
@@ -75,8 +75,8 @@ Application has basic structure with adherence to all SOLID principles and N-tie
 
 * Into `db.driver` field you need to insert driver `MySQL.com.mysql.cj.jdbc.Driver`
 * Into `db.url` field you need to insert url for connection to your database, it will be presented as `jdbc:mysql://localhost:3306/<your_db_name>`
-* Into `db.user` field you need to insert `root`, or you username that you have choosen while have been setupping MySQL.
-* Into `db.password` field you need to insert password that you have choosen while have been setupping MySQL.
+* Into `db.user` field you need to insert `root`, or you username that you have choosen while have been setting up MySQL.
+* Into `db.password` field you need to insert password that you have choosen while have been setting up MySQL.
 
 10. Install Apache Tomcat <sub> [download link](https://tomcat.apache.org/download-90.cgi) </sub>, add configuration for your project here ![image](https://user-images.githubusercontent.com/118058456/227192947-02e1e248-78d0-4085-a748-1ca2804f2409.png)
 
